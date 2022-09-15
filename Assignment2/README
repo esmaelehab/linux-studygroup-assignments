@@ -12,7 +12,7 @@ $ gcc -c Assignment2.c -I[HEADER_FILE_PATH]
 $ gcc Assignment2.o -o A2dynamicexe -lA2command.so -L[LIBRARY_PATH]
 $ ./A2dynamicexe
 
-//exection example
+//execution example
 Enter your command > hello
 you said: hello
 enter your command > hello world
