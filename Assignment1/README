@@ -1,0 +1,5 @@
+compilation commands:
+
+$ gcc -c Assignment1.c
+$ gcc Assignment1.o -o A1exe
+$ ./A1exe
