@@ -2,14 +2,14 @@
 $ gcc -c myrand.c myfact.c myfib.c
 $ ar -rs libA2command.a myrand.o myfact.o myfib.o
 $ gcc -c  Assignment2.c -I[HEADER_FILE_PATH]
-$ gcc Assignment2.o -o A2staticexe -lA2command.a -L[LIBRARY_PATH]
+$ gcc Assignment2.o -o A2staticexe -lA2command -L[LIBRARY_PATH]
 $ ./A2staticexe
 
 //for dynamic library compilation
 $ gcc -c -fPIC myrand.c myfact.c myfib.c
 $ gcc -shared myrand.o myfact.o myfib.o libA2command.so
 $ gcc -c Assignment2.c -I[HEADER_FILE_PATH]
-$ gcc Assignment2.o -o A2dynamicexe -lA2command.so -L[LIBRARY_PATH]
+$ gcc Assignment2.o -o A2dynamicexe -lA2command -L[LIBRARY_PATH]
 $ ./A2dynamicexe
 
 //execution example
