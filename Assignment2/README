@@ -1,0 +1,29 @@
+// for static library combilation
+$ gcc -c myrand.c myfact.c myfib.c
+$ ar -rs libA2command.a myrand.o myfact.o myfib.o
+$ gcc -c  Assignment2.c -I[HEADER_FILE_PATH]
+$ gcc Assignment2.o -o A2staticexe -lA2command -L[LIBRARY_PATH]
+$ ./A2staticexe
+
+//for dynamic library compilation
+$ gcc -c -fPIC myrand.c myfact.c myfib.c
+$ gcc -shared myrand.o myfact.o myfib.o libA2command.so
+$ gcc -c Assignment2.c -I[HEADER_FILE_PATH]
+$ gcc Assignment2.o -o A2dynamicexe -lA2command -L[LIBRARY_PATH]
+$ ./A2dynamicexe
+
+//execution example
+Enter your command > hello
+you said: hello
+enter your command > hello world
+you said: hello world
+enter your command > rand
+225926394
+enter your command > fact
+Enter a number: 6
+Result is: 720
+enter your command > fib
+Enter a number: 8
+0 1 1 2 3 5 8 13 
+enter your command > exit
+good bye
