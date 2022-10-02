@@ -1,0 +1,44 @@
+compilation commands:
+$ gcc -o mypwd mypwd.c
+$ gcc -o myecho myecho.c
+$ gcc -o mycp mycp.c
+$ gcc -o mymv mymv.c
+
+example of the output:
+
+PWD EXAMPLE:
+esmael@esmael-VirtualBox:~/linux-course/Assignments/Assignment4$ ./mypwd
+/home/esmael/linux-course/Assignments/Assignment4
+
+
+ECHO EXAMPLE:
+esmael@esmael-VirtualBox:~/linux-course/Assignments/Assignment4$ ./myecho Assignment 4 solution
+Assignment 4 solution 
+
+
+CP EXAMPLE:
+esmael@esmael-VirtualBox:~/linux-course/Assignments/Assignment4$ ./mycp myecho.c t1.txt
+esmael@esmael-VirtualBox:~/linux-course/Assignments/Assignment4$ cat t1.txt
+#include <stdio.h>
+
+int main (int argc, char * argv[])
+{
+	for (int i=1; i<argc; i++)
+	printf("%s ", argv[i]);
+	printf("\n");
+}
+
+
+MV EXAMPLE:
+esmael@esmael-VirtualBox:~/linux-course/Assignments/Assignment4$ ./mymv t1.txt t2.txt
+esmael@esmael-VirtualBox:~/linux-course/Assignments/Assignment4$ ls
+mycp  mycp.c  myecho  myecho.c  mymv  mymv.c  mypwd  mypwd.c  t2.txt
+esmael@esmael-VirtualBox:~/linux-course/Assignments/Assignment4$ cat t2.txt
+#include <stdio.h>
+
+int main (int argc, char * argv[])
+{
+	for (int i=1; i<argc; i++)
+	printf("%s ", argv[i]);
+	printf("\n");
+}
